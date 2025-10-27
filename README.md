@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# React Ticket App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple ticket management app built with React. Create, view, edit, and delete tickets. This README is intentionally short and focused — quick setup and usage so you can get started fast.
 
-Currently, two official plugins are available:
+## Live Demo
+https://hng-ticket-management-app-react.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Create new tickets with title and description
+- View a list of tickets
+- Edit and delete tickets
+- Simple client-side state management
 
-## React Compiler
+## Tech
+- React (JavaScript)
+- CSS (or your preferred styling)
+- Node.js and npm/yarn for local development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick Start
 
-## Expanding the ESLint configuration
+1. Clone the repo
+   git clone https://github.com/jaimzh/React-Ticket-App.git
+   cd React-Ticket-App
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Install dependencies
+   npm install
+   # or
+   yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. Run the app
+   npm start
+   # or
+   yarn start
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+4. Open http://localhost:3000 in your browser.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Build
+To create a production build:
+npm run build
+# or
+yarn build
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure (example)
+- src/ — React source code
+- public/ — static files
+- package.json — scripts and dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+(Adjust paths above if your project structure differs.)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contributing
+- Open an issue to discuss major changes.
+- Create a pull request for fixes or small features.
+- Keep changes focused and include a short description.
+
+## License
+MIT — see the LICENSE file (or add one) if you want an explicit license.
