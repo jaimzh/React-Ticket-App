@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
 import { Ticket, Clock, CheckCircle2, XCircle } from "lucide-react";
 import Navbar from "./Navbar";
 
